@@ -4,14 +4,14 @@
 ### 原理是什么？
 原理是dom元素的冒泡机制。
 ### 示例
-// 获取父节点，并为它添加一个click事件（创建一个id为parent-list的ul）      
-document.getElementById("parent-list").addEventListener("click",function(e) {   
-// 检查事件源e.targe是否为Li   
-  if(e.target && e.target.nodeName.toUpperCase == "li") {  
-    // 真正的处理过程在这里   
-    console.log("List item ",e.target.id.replace("post-")," was clicked!");
-  }
-});
+// 获取父节点，并为它添加一个click事件（创建一个id为parent-list的，ul子元素为多个li）      
+      document.getElementById("parent-list").addEventListener("click",function(e) {     
+      // 检查事件源e.targe是否为Li  
+        if(e.target && e.target.nodeName.toUpperCase == "li") {
+        // 真正的处理过程在这里
+        console.log("List item ",e.target.id.replace("post-")," was clicked!");
+      }
+    });
 
 jq中的事件委托处理（on和delegate）
 $("#link-list").delegate("a", "click", function(){
