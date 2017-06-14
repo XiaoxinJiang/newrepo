@@ -1,9 +1,10 @@
-又为事件委托，是把原本要绑定的事件委托给父元素，让父元素担当事件监听。原理是dom元素的冒泡机制。
-// 获取父节点，并为它添加一个click事件
-document.getElementById("parent-list").addEventListener("click",function(e) {
-  // 检查事件源e.targe是否为Li
-  if(e.target && e.target.nodeName.toUpperCase == "li") {
-    // 真正的处理过程在这里
+事件代理又为事件委托，是把原本要绑定的事件委托给父元素，让父元素担当事件监听。    
+原理是dom元素的冒泡机制。     
+// 获取父节点，并为它添加一个click事件（创建一个id为parent-list的ul）      
+document.getElementById("parent-list").addEventListener("click",function(e) {   
+// 检查事件源e.targe是否为Li   
+  if(e.target && e.target.nodeName.toUpperCase == "li") {  
+    // 真正的处理过程在这里   
     console.log("List item ",e.target.id.replace("post-")," was clicked!");
   }
 });
