@@ -1,9 +1,9 @@
 # 事件代理
 ### 什么是事件代理？
 又为事件委托，是把原本要绑定的事件委托给父元素，让父元素担当事件监听。  
-原理是什么？
+### 原理是什么？
 原理是dom元素的冒泡机制。
-示例
+### 示例
 // 获取父节点，并为它添加一个click事件（创建一个id为parent-list的ul）      
 document.getElementById("parent-list").addEventListener("click",function(e) {   
 // 检查事件源e.targe是否为Li   
